@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Артемий Седаков](https://up.htmlacademy.ru/htmlcss/18/user/473759).
-* Наставник: Сергей Рубец https://htmlacademy.ru/profile/amator.
+* Наставник: [Сергей Рубец] (https://htmlacademy.ru/profile/amator).
 
 ---
 
