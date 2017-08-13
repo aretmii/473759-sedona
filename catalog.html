@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+      <header>
+		<nav class="main-navigation">
+			<a class="main-header-logo">
+				<img src="/img/logo.png" width="150" height="100" alt="Логотип сайта Sedona">
+			</a>
+			<ul class="site-navigation">
+				<li><a href="info.html">Информация</a></li>
+				<li><a href="media.html">Фото и видео</a></li>
+				<li><a href="map.html">Карта штата</a></li>
+				<li><a href="hotels.html">Гостиницы</a></li>
+			</ul>
+		</nav>
+      </header>
+	  <main class="container">
+		
+		<header class="container-header">
+			<section class="features-hotels">
+				<ul><h3>Инфраструктура:</h3>
+					<li><input type="checkbox" name="pool" checked>Бассейн</li>
+					<li><input type="checkbox" name="park">Парковка</li>
+					<li><input type="checkbox" name="wifi">Wi-Fi</li>
+				</ul>
+				<ul><h3>Тип жилья:</h3>
+					<li><input type="checkbox" name="hotels" checked>Гостиница</li>
+					<li><input type="checkbox" name="motels" checked>Мотель</li>
+					<li><input type="checkbox" name="appartments" checked>Апартаменты</li>
+				</ul>
+			</section>
+		
+			<section class="features-cost">
+				<form id="cost">
+				<table>
+					<caption>Стоимость в сутки (р):</caption>
+					<tr>
+						<td>от 0</td>
+						<td>до 3000</td>
+					</tr>
+				</table>
+				<input type="range" min="0" max="3000" value="2800">
+				<button>Показать</button>
+				<form>
+			</section>
+		</header>
+		<section class="container-offers">
+			<div class="sorting-menu">
+				<!--как разметить цифру которая будет выпадать при сортировке?-->
+				<h3>Найдено:</h3>
+				<ul class="sorting-menu-options">
+					<li><a href="#">По цене</a></li>
+					<li><a href="#">По типу</a></li>
+					<li><a href="#">По рейтингу</a></li>
+				</ul>
+				<button class=""></button>
+				<button class=""></button>
+			</div>
+		</section>
+		<section class="container-content">
+			<article class="article-hotels">
+				<h3>Amara resort & SPA</h3>
+				<p>Гостиница от 3000 р.</p>
+				<button>Подробнее</button>
+				<button>Забронировать</button>
+				<p class="rate">Рейтинг: 8,5</p>
+				<img class="article-hotels-img" src="/img/Amararesort.jpg" alt="Amara resort & SPA Hotel">
+			</article>
+			<article class="article-hotels">
+				<h3>Desert Quail Inn</h3>
+				<p>Мотель от 2000 р.</p>
+				<button>Подробнее</button>
+				<button>Забронировать</button>
+				<p class="rate">Рейтинг: 8,9</p>
+				<img class="article-hotels-img" src="/img/Amararesort.jpg" alt="Desert Quail Inn Motel">
+			</article>
+			<article class="article-hotels">
+				<h3>Villas at  poco diablo</h3>
+				<p>Апартамент от 4000 р.</p>
+				<button>Подробнее</button>
+				<button>Забронировать</button>
+				<p class="rate">Рейтинг: 9,2</p>
+				<img class="article-hotels-img" src="/img/Amararesort.jpg" alt="Villas at  poco diablo appartments">
+			</article>
+		</section>
+	  </main>
+	  <footer class="main-footer">
+		<p class="tag">
+		#visitSedona
+		</p>
+		<div class="footer-social">
+			<ul>
+				<li><a class="social-button" href="#">Твиттер</a></li>
+				<li><a class="social-button" href="#">Фейсбук</a></li>
+				<li><a class="social-button" href="#">Ютуб</a></li>
+			</ul>
+		</div>
+		<p class="footer-copyright">
+			Website by
+			<a class="htmlacademy-logo" href="https://htmlacademy.ru/">HTMLAcademy</a>
+		</p>
+	  </footer>
+  </body>
+</html>
