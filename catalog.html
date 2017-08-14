@@ -6,20 +6,19 @@
   </head>
   <body>
       <header>
-		<nav class="main-navigation">
-			<a class="main-header-logo">
-				<img src="/img/logo.png" width="150" height="100" alt="Логотип сайта Sedona">
-			</a>
-			<ul class="site-navigation">
-				<li><a href="info.html">Информация</a></li>
-				<li><a href="media.html">Фото и видео</a></li>
-				<li><a href="map.html">Карта штата</a></li>
-				<li><a href="hotels.html">Гостиницы</a></li>
+		<a class="main-header-logo">
+            <img src="/img/logo.png" width="150" height="100" alt="Логотип сайта Sedona">
+        </a>
+        <nav class="main-navigation">
+            <ul class="site-navigation">
+                <li><a href="info.html">Информация</a></li>
+                <li><a href="media.html">Фото и видео</a></li>
+                <li><a href="map.html">Карта штата</a></li>
+                <li><a href="hotels.html">Гостиницы</a></li>
 			</ul>
 		</nav>
       </header>
 	  <main class="container">
-		
 		<header class="container-header">
 			<section class="filters">
 				<h2 class="visually-hidden">Фильтры</h2>
@@ -28,15 +27,15 @@
 						<legend>Инфраструктура:</legend>
 						<ul>
 							<li class="filter-option">
-							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" checked>
+				                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" checked>
 							Бассейн
 							</li>
 							<li class="filter-option">
-							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="park">
+				                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="park">
 							Парковка
 							</li>
 							<li class="filter-option">
-							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wifi">
+				                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wifi">
 							Wi-Fi
 							</li>
 						</ul>
@@ -69,7 +68,7 @@
 						</tr>
 					</table>
 					<input type="range" min="0" max="3000" value="2800">
-					<button>Показать</button>
+					<button type="submit">Показать</button>
 					</fieldset>
 				</form>
 				
@@ -84,7 +83,16 @@
 				
 				<p>Сортировка:</p>
 				<ul class="sorting-menu-options">
-					<li><a href="#">По цене</a></li>
+					<li><a href="#">По убыванию цены</a></li>
+					<li><a href="#">По возрастанию цены</a></li>
+                    <!--Или можно сделать выпадающий список
+                    <li>
+                        <select class="sorting-menu-options-select">
+                            <option>Цена</option>
+                            <option><a href="#">Дешевле</a></option>
+                            <option><a href="#">Дороже</a></option>
+                        </select>
+                    </li>-->
 					<li><a href="#">По типу</a></li>
 					<li><a href="#">По рейтингу</a></li>
 				</ul>
@@ -101,9 +109,9 @@
 					<li class="catalog-item">
 						<h3>
 						<a href="#">
-							<span class="catalog-item-title">Amara resort & SPA</span>
+							<span class="catalog-item-title">Amara resort &amp; SPA</span>
 							<span class="catalog-category">Гостиница</span>
-							<!--Куда деть цену? она же должна быть интерактивна-->
+                            <div>от 3500р.</div>
 						</a>
 						</h3>
 						<p>
@@ -123,12 +131,12 @@
 						<a href="#">
 							<span class="catalog-item-title">Desert Quail Inn</span>
 							<span class="catalog-category">Мотель</span>
-							<!--Куда деть цену? она же должна быть интерактивна-->
+                            <div>от 2000р.</div>
 						</a>
 						</h3>
 						<p>
 							<a href="#">
-								<img src="img/123.jpg" width="70" height="50" alt="Amara resort & SPA">
+								<img src="img/123.jpg" width="70" height="50" alt="Desert Quail Inn">
 							</a>
 						</p>
 						<p>
@@ -143,12 +151,12 @@
 						<a href="#">
 							<span class="catalog-item-title">Villas at  poco diablo</span>
 							<span class="catalog-category">Апартаменты</span>
-							<!--Куда деть цену? она же должна быть интерактивна-->
+                            <div>от 4000р.</div>
 						</a>
 						</h3>
 						<p>
 							<a href="#">
-								<img src="img/123.jpg" width="70" height="50" alt="Amara resort & SPA">
+								<img src="img/123.jpg" width="70" height="50" alt="Villas at  poco diablo">
 							</a>
 						</p>
 						<p>
