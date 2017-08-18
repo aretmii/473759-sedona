@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="ru">
+<link href="style.css" rel="stylesheet">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
       <header>
+          <a class="main-header-logo">
+				<img src="img/logo.png" width="140" height="70" alt="Логотип сайта Sedona">
+          </a>
 		  <nav class="main-navigation">
-			<a class="main-header-logo">
-				<img src="/img/logo.png" width="150" height="100" alt="Логотип сайта Sedona">
-			</a>
-				<ul class="site-navigation">
+              <ul class="site-navigation">
 				<li><a href="info.html">Информация</a></li>
 				<li><a href="media.html">Фото и видео</a></li>
 				<li><a href="map.html">Карта штата</a></li>
 				<li><a href="hotels.html">Гостиницы</a></li>
-			</ul>
+              </ul>
 		  </nav>
       </header>
 	  <main class="container">
 		<h1 class="visually-hidden">Welcome to the gorgeous Sedona "Because the grand canyon sucks"</h1>
+        <!--Здесь я добавил разметку под картинки "Welcome to the gorgeous Sedona "Because the grand canyon sucks""-->
+        <div class="main_caption">
+            <img class="gorgeous-img" src="img/welcome-to-the-gorgeous.png" alt="Welcome to the gorgeous"/>
+            <img class="sdona-img" src="img/sedona.png" alt="Sedona"/>
+            <img class="sucks-img" src="img/sucks.png" alt="Because the grand canyon sucks"/>
+            <img src="img/shape.png" alt="shape"/>
+        </div>
 		<section class="features">
-			<h2>Седона небольшой городок в Аризоне,  заслуживающий большего!</h2>
+			<p>
+                <h2>Седона небольшой городок в Аризоне,  заслуживающий большего!</h2>
+            </p>
 			<p>Рассмотрим  5 причин, по которым  седона  круче, чем Гранд Каньон!</p>
 			<ul class="features-list">
 				<li class="features-item">
 					<h2>Настоящий городок</h2>
-					
 					<p>
 						<span>№1</span>Седона - не атракцион для туристов, там течет своя жизнь
 					</p>
-					
 				</li>
 				<li>
-					<img src="/img/__" width="65" height="100" alt="картинка">
+					<img src="img/real-city.jpg" alt="Настоящий городок"/>
 				</li>
 			</ul>
 			
@@ -64,7 +72,9 @@
 				</ul>
 			</section>
 			<ul class="features-list">
-				<li></li>
+				<li>
+                    <img src="img/diablo-bridge.jpg" alt="diablo-bridge"/>
+                </li>
 				<li class="features-item">
 					<h2>Там есть мост дьявола</h2>
 					<p>
@@ -99,6 +109,7 @@
 				Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
 			</p>
 			<div class="map">
+                <img src="img/map.jpg" alt="Карта"/>
 			</div>
 		</section>
 		<section class="appointment">
