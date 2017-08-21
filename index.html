@@ -40,30 +40,32 @@
           <img src="img/real-city.jpg" alt="Настоящий городок"/>
         </li>
       </ul>
-
       <section class="features-refind">
-
         <ul class="features-list">
           <li class="features-item">
-            <a class="features-list-img" href="hotels.html"></a>
-            <h2>Жилье</h2>
-            <p>
-              Рекомендуем пожить как в настоящем отеле, все как в кино!
-            </p>
+            <!--обернул содержимое ячейки в ссылку/-->
+            <a class="features-list-img" href="hotels.html">
+              <h2>Жилье</h2>
+              <p>
+                Рекомендуем пожить как в настоящем отеле, все как в кино!
+              </p>
+            </a>
           </li>
           <li class="features-item">
-            <a class="features-list-img" href="hotels.html"></a>
-            <h2>Еда</h2>
-            <p>
-              Всегда заказывайте фирменный бургер, вы не разочаруетесь!
-            </p>
+            <a class="features-list-img" href="food.html">
+              <h2>Еда</h2>
+              <p>
+                Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+              </p>
+            </a>
           </li>
           <li class="features-item">
-            <a class="features-list-img" href="hotels.html"></a>
-            <h2>Сувениры</h2>
-            <p>
-              Не только Китайского, но и местного производства!
-            </p>
+            <a class="features-list-img" href="souvenirs.html">
+              <h2>Сувениры</h2>
+              <p>
+                Не только Китайского, но и местного производства!
+              </p>
+            </a>
           </li>
         </ul>
       </section>
@@ -109,23 +111,24 @@
       </div>
     </section>
     <section class="appointment">
-      <h2>Поиск гостиницы в Седоне</h2>
+      <label >Поиск гостиницы в Седоне</label>
       <form class="appointment-form">
+        <!--здесь обернул input в label, оставлять <p>?-->
         <p>
-          Дата заезда:
-          <input type="date" name="name" value="" >
+          <label for="enter-date">Дата заезда:</label>
+          <input id="enter-date" type="date" name="name" value="" >
         </p>
         <p>
-          Дата выезда:
-          <input type="date" name="name" value="" >
+          <label for="date-exit">Дата выезда:</label>
+          <input id="date-exit" type="date" name="name" value="" >
         </p>
         <p>
-          Взрослые:
-          <input type="number" name="name" value="" placeholder="0">
+          <label for="adult">Взрослые:</label>
+          <input id="adult" type="number" name="name" value="" placeholder="0">
         </p>
         <p>
-          Дети:
-          <input type="number" name="name" value="" placeholder="0">
+          <label for="kids">Дети:</label>
+          <input id="kids" type="number" name="name" value="" placeholder="0">
         </p>
         <button class="button" type="submit">Найти</button>
       </form>
@@ -137,9 +140,9 @@
     </p>
     <div class="footer-social">
       <ul>
-        <li><a class="social-button" href="#">Твиттер</a></li>
-        <li><a class="social-button" href="#">Фейсбук</a></li>
-        <li><a class="social-button" href="#">Ютуб</a></li>
+        <li><a class="social-button" href="https://ru-ru.facebook.com/">Твиттер</a></li>
+        <li><a class="social-button" href="https://twitter.com/?lang=ru">Фейсбук</a></li>
+        <li><a class="social-button" href="https://www.youtube.com/">Ютуб</a></li>
       </ul>
     </div>
     <p class="footer-copyright">
