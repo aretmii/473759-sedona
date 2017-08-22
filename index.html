@@ -43,7 +43,6 @@
       <section class="features-refind">
         <ul class="features-list">
           <li class="features-item">
-            <!--обернул содержимое ячейки в ссылку/-->
             <a class="features-list-img" href="hotels.html">
               <h2>Жилье</h2>
               <p>
@@ -113,23 +112,18 @@
     <section class="appointment">
       <label >Поиск гостиницы в Седоне</label>
       <form class="appointment-form">
-        <!--здесь обернул input в label, оставлять <p>?-->
-        <p>
-          <label for="enter-date">Дата заезда:</label>
-          <input id="enter-date" type="date" name="name" value="" >
-        </p>
-        <p>
-          <label for="date-exit">Дата выезда:</label>
-          <input id="date-exit" type="date" name="name" value="" >
-        </p>
-        <p>
-          <label for="adult">Взрослые:</label>
+        <label>Дата заезда:
+          <input type="date" name="name" value="" >
+        </label>
+        <label>Дата выезда:
+          <input type="date" name="name" value="" >
+        </label>
+        <label>Взрослые:
           <input id="adult" type="number" name="name" value="" placeholder="0">
-        </p>
-        <p>
-          <label for="kids">Дети:</label>
-          <input id="kids" type="number" name="name" value="" placeholder="0">
-        </p>
+        </label>
+        <label>Дети:
+          <input type="number" name="name" value="" placeholder="0">
+        </label>
         <button class="button" type="submit">Найти</button>
       </form>
     </section>
