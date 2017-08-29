@@ -108,8 +108,8 @@ input{
 }
 
 /*----------------------------------------Hotels  MAP-----------------------------------------*/
-section.appointment{
-    height: 480px;
+.appointment{
+    min-height: 480px;
     width: 570px;
 }
 
@@ -208,7 +208,7 @@ fieldset{
 }
 
 .filter-fieldset ul{
-    padding: 0px;
+    padding: 0;
 }
 
 .filter-fieldset:nth-child(2){
