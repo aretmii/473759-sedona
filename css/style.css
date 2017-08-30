@@ -14,6 +14,13 @@ a{
     text-decoration: none;
 }
 
+h2{
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+    color: #000000;
+}
+
 .visually-hidden{
     line-height: 74px;
     font-size: 74px;
@@ -51,19 +58,6 @@ a{
     color: #766357;
 }
 
-/*----------------------------------PREVIEW-------------------------------------*/
-/*что-то с фоном не очень я понял, он должен быть задан вложенному блоку,  или блоку main?*/
-.sedona-preview{
-    min-width: 1200px;
-    min-height: 773px;
-    background-image: url("../img/background.jpg");
-    background-repeat:  no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-
-.sedona-preview img{
-}
 
 /*----------------------------------FEATURES---------------------------------------*/
 
@@ -367,16 +361,305 @@ div.catalog-category{
 }
 
 a.button{
-    padding:3px 15px;
-    display:inline-block;
+    padding:  3px 15px;
+    display:  inline-block;
     text-align: center;
-    color:#ffffff;
+    color:  #ffffff;
     vertical-align: middle;
     text-transform: uppercase;
     border: none;
-    background-color:#81b3d2;
+    background-color: #81b3d2;
 }
 
 a.button-more{
-    background-color:#766357;
+    background-color: #766357;
+}
+
+/*------------------------------------FLEX Разметка------------------------------*/
+
+html,
+body{
+    min-width:768px;
+}
+
+body{
+    background-image: url("../img/sedona-index-1200.jpg");
+    background-repeat: no-repeat;
+    background-size: 1280 auto;
+    background-position: top;
+}
+
+/*Вопрос по background. он в сравнении с sedona-index.jpg съехал вниз пикселей на 10, не могу понять причину*/
+.main-header{
+    width: 1200px;
+    min-height: 760px;
+    margin:0 auto;
+    background-image: url("../img/background.jpg");
+    background-repeat:  no-repeat;
+    background-position: center;
+}
+
+.container{
+    min-width: 768px;
+    max-width: 1200px;
+    min-height: 56px;
+    margin: 0 auto;
+}
+
+.main-header-logo {
+    width: 140px;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    /*---------------------Как logo сдвинуть на середину не используя top и left??*/
+    display: block;
+    position: absolute;
+    left: 665px;
+
+}
+
+.main-navigation{
+    width: 1200px;
+    min-height: 56px;
+    background-color: #ffffff;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: stretch;
+
+}
+
+.site-navigation{
+    min-height: 55px;
+    width: 1200px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sedona-preview{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sedona-preview-tagline{
+    margin-top: 76px;
+}
+
+.sedona-preview-shapes{
+    min-height: 215px;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sedona-preview-shapes h2{
+    margin-top: 65px;
+    display: inline-block;
+    width: 450px;
+    text-align: center;
+}
+
+.sedona-preview-shapes p{
+    margin-top: 21px;
+}
+
+/*---------------------------------FEATURES---------------------------------------*/
+
+.features{
+    display:flex;
+    flex-direction: column;
+}
+
+.features-list{
+    width: 1200px;
+    min-height: 330px;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    list-style: none;
+}
+
+.features-list-photo{
+    width: 1200px;
+    min-height: 255px;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.features-list-photo li > h2,
+.features-list-photo li > p{
+    color: #ffffff;
+}
+
+.features-item h2{
+    font-weight: bold;
+}
+
+.features-item{
+    width: 400px;
+    min-height: 255px;
+    background-color: #81b3d2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.features-item h2{
+    margin: 0;
+}
+
+.features-item p{
+    width: 280px;
+}
+
+.features-item-flag{
+    background-image: url("../img/real-city.jpg");
+    background-repeat: no-repeat;
+    width: 800px;
+}
+
+.features-item-devil{
+    background-image: url("../img/devil-bridge.jpg");
+    background-repeat: no-repeat;
+    width: 800px;
+}
+
+.features-refind{
+    min-height: 330px;
+}
+
+.features-refind ul > li{
+    background-color: #ffffff;
+}
+
+.features-list-last{
+      width: 1200px;
+      min-height: 255px;
+      display: flex;
+      padding: 0;
+      margin: 0;
+      color: #ffffff;
+}
+
+.features-list-last li{
+    background-color: #eeeeee;
+}
+
+/*------------------------------------------MAP-----------------------------------*/
+
+.hotels-map{
+    min-width: 1200px;
+    min-height: 885px;
+    display: flex;
+    flex-direction: column;
+}
+
+.white-back{
+    min-height: 290px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.map{
+    min-height: 595px;
+    max-width: 1200px;
+    background-image: url("../img/map.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.white-back p{
+    margin: 0;
+    font-weight: normal;
+}
+/*-----------------------------------Appointment---------------------------*/
+
+.appointment-form{
+    min-width: 570px;
+    min-height: 395px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.appointment-button{
+    margin-top: 50px;
+    font-size: 21px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.appointment-label{
+    color: #000000;
+}
+
+.appointment-form input{
+    width: 350px;
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+.appointment-form button{
+    min-width: 460px;
+    min-height: 60px;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+/*---------------------------------------footer------------------------------*/
+
+.main-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tag{
+    font-weight: bold;
+    font-size: 21px;
+    color: #000000;
+}
+
+.social-button{
+    width: 45px;
+    height: 50px;
+}
+
+.footer-social{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-social li{
+    background-color: #81b3d2;
+    /*background-image: url("../img/fb-icon.svg");
+    background-repeat: no-repeat;*/
+    width: 45px;
+    height: 50px;
+    margin-left: 5px;
+}
+
+.footer-social a{
+    display: flex;
+    justify-content: center;
 }
