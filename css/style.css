@@ -139,6 +139,7 @@ input{
 .main-footer{
     background-color: #ffffff;
     opacity: 0.9;
+    min-height: 120px;
 }
 
 .footer-social{
@@ -178,14 +179,6 @@ input{
 
 fieldset{
     border: none;
-}
-
-.filters{
-    height: 220px;
-    background-image: url("../img/background.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 
 .filter-option{
@@ -258,21 +251,21 @@ fieldset{
 }
 
 /*-----------------------------------SORTING-Menu---------------------------*/
+.sorting-menu{
+    background-color: #ffffff;
+    min-width: 1055px;
+}
+
 .sorting-menu-options{
     font-size: 12px;
     line-height: 18px;
     list-style: none;
-    display: block;
 }
 
 .sorting-menu-fieldset p{
     font-size: 21px;
     font-weight: bold;
     line-height: 26px;
-}
-
-.sorting-menu-fieldset ul{
-    display: inline-block;
 }
 
 .sorting-menu-options li,p{
@@ -305,20 +298,27 @@ fieldset{
 /*ОТКУДА У  UL MARGIN-BOTTOM 14px????????
 я переопределил margin-bottom на 0px, и li повел себя как то странно,
 как будто один вложен в другой.
-но т.к. всё это переделывать под flex, то этот вопрос я думаю не имеет значения
 */
+.content{
+    background-color: #ffffff;
+}
 
 .catalog-list{
     list-style: none;
     border-top: 1px solid #e5e5e5;
     height: 152px;
     margin-top: 0px;
+    padding-left: 70px;
 }
 
 .catalog-list:last-child{
     list-style: none;
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
+}
+
+.catalog-list:last-of-type{
+    margin-bottom: 0;
 }
 
 .catalog-item li{
@@ -382,16 +382,8 @@ body{
     min-width:768px;
 }
 
-body{
-    background-image: url("../img/sedona-index-1200.jpg");
-    background-repeat: no-repeat;
-    background-size: 1280 auto;
-    background-position: top;
-}
-
-/*Вопрос по background. он в сравнении с sedona-index.jpg съехал вниз пикселей на 10, не могу понять причину*/
 .main-header{
-    width: 1200px;
+    max-width: 1200px;
     min-height: 760px;
     margin:0 auto;
     background-image: url("../img/background.jpg");
@@ -409,35 +401,35 @@ body{
 .main-header-logo {
     width: 140px;
     height: 70px;
-    margin: 0;
     padding: 0;
-    /*---------------------Как logo сдвинуть на середину не используя top и left??*/
-    display: block;
     position: absolute;
-    left: 665px;
-
 }
 
 .main-navigation{
     width: 1200px;
-    min-height: 56px;
-    background-color: #ffffff;
-    display:flex;
+    min-height: 55px;
+    background-color: transparent;
+    display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
     align-content: stretch;
 
 }
-
+/*-----------Пока не очень получается разместить пункты меню равномерно-----*/
 .site-navigation{
-    min-height: 55px;
     width: 1200px;
+    min-height: 55px;
     margin: 0;
     padding: 0;
+    background-color: #ffffff;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    align-content: stretch;
+}
+
+.navigation-align{
 }
 
 .sedona-preview{
@@ -662,4 +654,42 @@ body{
 .footer-social a{
     display: flex;
     justify-content: center;
+}
+
+/*-------------------------------------------FLEX INNER PAGE-----------------------------------*/
+
+.filters{
+    max-width: 1200px;
+    min-height: 215px;
+    margin: 0 auto;
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.catalog{
+    display: flex;
+    flex-direction: column;
+}
+
+.sorting-menu{
+    display: flex;
+    justify-content: center;
+    color: #000000;
+}
+
+.sorting-menu-form{
+    width: 1200px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 70px;
+    align-items: center;
+}
+
+.sorting-menu-fieldset{
+
+}
+
+.sorting-btn:first-of-type{
+    margin-left: 500px;
 }
