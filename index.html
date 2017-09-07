@@ -17,13 +17,14 @@
         <ul class="site-navigation">
           <li><a href="info.html">Информация</a></li>
           <li><a href="media.html">Фото и видео</a></li>
-          <li class="navigation-align"><a href="map.html">Карта штата</a></li>
-          <li class="navigation-align"><a href="hotels.html">Гостиницы</a></li>
+          <li><a href="map.html">Карта штата</a></li>
+          <li><a href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
     <section class="sedona-preview">
       <h1 class="visually-hidden">Welcome to the gorgeous Sedona "Because the grand canyon sucks"</h1>
       <div class="sedona-preview-tagline">
+        <!--Может эту картинку сделать через background? она же не контентная-->
         <img src="img/intro.png" alt="Welcome to the gorgeous Sedona "Because the grand canyon sucks"">
       </div>
       <img src="img/shape.png" alt="Shapes">
@@ -123,20 +124,23 @@
       <div class="map">
         <section class="appointment">
           <form class="appointment-form">
-            <label class="appointment-label">Дата заезда:
-              <input type="date" name="name" value="">
-            </label>
-            <label class="appointment-label">Дата выезда:
-              <input type="date" name="name" value="">
-            </label>
-            <label class="appointment-label">Взрослые:
+            <p class="appointment-item">
+              <label for="arrival-date">Дата заезда:</label>
+              <input id="arrival-date" type="date" name="name" value="">
+            <p class="appointment-item">
+              <label for="dep-date">Дата выезда:</label>
+              <input id="dep-date" type="date" name="name" value="">
+            </p>
+            <p class="appointment-item-people">
+              <label for="adult">Взрослые:</label>
               <input id="adult" type="number" name="name" value="" placeholder="0">
-            </label>
-            <label class="appointment-label">Дети:
-              <input type="number" name="name" value="" placeholder="0">
-            </label>
-            <button class="button" type="submit">Найти</button>
+            </p>
+            <p class="appointment-item-people">
+              <label for="kids">Дети:</label>
+              <input id="kids" type="number" name="name" value="" placeholder="0">
+            </p>
           </form>
+          <button type="submit">Найти</button>
         </section>
       </div>
     </section>

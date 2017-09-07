@@ -102,11 +102,6 @@ input{
 }
 
 /*----------------------------------------Hotels  MAP-----------------------------------------*/
-.appointment{
-    min-height: 480px;
-    width: 570px;
-}
-
 .appointment-button a{
     display: block;
     text-align: center;
@@ -115,6 +110,16 @@ input{
     color: #ffffff;
     background-color: #766357;
     border: 0;
+}
+
+.appointment{
+    width: 570px;
+    min-height: 395px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .appointment-form input{
@@ -164,7 +169,7 @@ input{
     color: #000000;
     vertical-align: middle;
 }
-/*------------------------------НУЖНО ДОДЕЛАТЬ FILL у SVG------------------------*/
+
 .footer-copyright svg{
     width: 80px;
     height: 40px;
@@ -177,6 +182,10 @@ input{
 /*-----------------------------Filters---------------------------*/
 /*-----------как быть с иконками чекбокса? именно svg картиинки чекбоксов не открываются*/
 
+form.filter{
+    display: flex;
+}
+
 fieldset{
     border: none;
 }
@@ -185,6 +194,14 @@ fieldset{
     width: 240px;
     list-style: none;
 }
+
+.filter-option li::after{
+    content: " ";
+    background-image: url("../img/calendar.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .filter-fieldset{
     margin-top: 30px;
     width: 240px;
@@ -401,37 +418,32 @@ body{
 .main-header-logo {
     width: 140px;
     height: 70px;
-    padding: 0;
     position: absolute;
 }
-
+/*---------------------------------navigation-------------------------------*/
 .main-navigation{
-    width: 1200px;
-    min-height: 55px;
     background-color: transparent;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
-    align-content: stretch;
-
-}
-/*-----------Пока не очень получается разместить пункты меню равномерно-----*/
-.site-navigation{
-    width: 1200px;
-    min-height: 55px;
-    margin: 0;
-    padding: 0;
     background-color: #ffffff;
+}
+
+.site-navigation{
+    margin: 0 70px 0 70px;
+    padding:0;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    align-content: stretch;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-wrap: wrap;
 }
 
-.navigation-align{
+.site-navigation a{
+    display: block;
+    text-align: center;
+    padding: 15px 0 15px 0;
 }
 
+/*-----------------------------------Background SEDONA----------------------*/
 .sedona-preview{
     display: flex;
     flex-direction: column;
@@ -479,6 +491,14 @@ body{
     list-style: none;
 }
 
+.features-item h2{
+    margin: 0;
+}
+
+.features-list-img h2{
+    margin: 30px 0 30px 0;
+}
+
 .features-list-photo{
     width: 1200px;
     min-height: 255px;
@@ -493,10 +513,6 @@ body{
     color: #ffffff;
 }
 
-.features-item h2{
-    font-weight: bold;
-}
-
 .features-item{
     width: 400px;
     min-height: 255px;
@@ -507,10 +523,6 @@ body{
     align-items: center;
 }
 
-.features-item h2{
-    margin: 0;
-}
-
 .features-item p{
     width: 280px;
 }
@@ -518,13 +530,17 @@ body{
 .features-item-flag{
     background-image: url("../img/real-city.jpg");
     background-repeat: no-repeat;
-    width: 800px;
+    background-size: 110%;
+    background-position: center;
+    min-width: 800px;
 }
 
 .features-item-devil{
     background-image: url("../img/devil-bridge.jpg");
     background-repeat: no-repeat;
-    width: 800px;
+    background-size: 110%;
+    background-position: center;
+    min-width: 800px;
 }
 
 .features-refind{
@@ -566,6 +582,10 @@ body{
     align-items: center;
 }
 
+.white-back h2{
+    font-size: 30px;
+}
+
 .map{
     min-height: 595px;
     max-width: 1200px;
@@ -584,12 +604,21 @@ body{
 /*-----------------------------------Appointment---------------------------*/
 
 .appointment-form{
-    min-width: 570px;
-    min-height: 395px;
+    width: 460px;
+    height: 285px;
     background-color: #ffffff;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.appointment-item{
+    color: #000000;
+    width: 460px;
+    height: 45px;
+    display: flex;
+    margin: 0;
     align-items: center;
 }
 
@@ -600,20 +629,40 @@ body{
     text-transform: uppercase;
 }
 
-.appointment-label{
-    color: #000000;
-}
-
-.appointment-form input{
-    width: 350px;
+.appointment-item label{
+    width: 130px;
     height: 40px;
-    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
 }
 
-.appointment-form button{
-    min-width: 460px;
-    min-height: 60px;
+.appointment-item input{
+    min-width: 345px;
+    height: 40px;
+    /*------------------------Как сделать картинки блеклыми?-------------*/
+    background-image: url("../img/calendar.svg");
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-position: 98% 50%;
+  }
+
+.appointment-item-people{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: 40px;
+}
+
+.appointment-item-people input{
+    width: 115px;
+    height: 40px;
+    margin-left: 40px;
+}
+
+.appointment button{
     font-size: 21px;
+    width: 460px;
+    height: 60px;
     text-transform: uppercase;
     font-weight: normal;
 }
@@ -662,6 +711,7 @@ body{
     max-width: 1200px;
     min-height: 215px;
     margin: 0 auto;
+    /*---------------------------------Как размыть фон?------------------*/
     background-image: url("../img/background.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -684,10 +734,6 @@ body{
     justify-content: flex-start;
     margin-left: 70px;
     align-items: center;
-}
-
-.sorting-menu-fieldset{
-
 }
 
 .sorting-btn:first-of-type{
