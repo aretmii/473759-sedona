@@ -112,6 +112,15 @@ input{
     border: 0;
 }
 
+.appointment-button a:hover{
+    background-color: #604e43;
+}
+
+.appointment-button a:active{
+    background-color: #503e33;
+    color: #928a85;
+}
+
 .appointment{
     width: 570px;
     min-height: 395px;
@@ -156,24 +165,6 @@ input{
 .footer-social a{
     color: #000000;
 }
-
-.footer-copyright{
-    text-align: center;
-}
-
-.footer-copyright img{
-    height: 40px;
-    width: 115px;
-    color: #000000;
-    vertical-align: middle;
-}
-
-.footer-copyright svg{
-    width: 80px;
-    height: 40px;
-    vertical-align: middle;
-}
-
 
 /*-----------------------------Inner Page Styles-------------------------------------*/
 
@@ -252,8 +243,26 @@ a.button{
     background-color: #81b3d2;
 }
 
+a.button:hover{
+    background-color: #669ec0;
+}
+
+a.button:active{
+    background-color: #5496bd;
+    color: #94b9d2;
+}
+
 a.button-more{
     background-color: #766357;
+}
+
+a.button-more:hover{
+    background-color: #766357;
+}
+
+a.button-more:active{
+    background-color: #503e33;
+    color: #94b9d2;
 }
 
 /*------------------------------------FLEX Разметка------------------------------*/
@@ -520,10 +529,11 @@ body{
 .appointment-item{
     color: #000000;
     width: 460px;
-    height: 45px;
+    height: 38px;
     display: flex;
     margin: 0;
     align-items: center;
+    position: relative;
 }
 
 .appointment-button{
@@ -543,23 +553,92 @@ body{
 .appointment-item input{
     min-width: 345px;
     height: 40px;
+    /*
+    другой способ добавления значка календаря в input
     background-image: url("../img/calendar.svg");
     background-repeat: no-repeat;
     background-origin: padding-box;
     background-position: 98% 50%;
+    */
   }
+
+.appointment-item > a{
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+
+.appointment-item > a > svg > path{
+    fill: #a9a9a9;
+}
+
+.appointment-item > a > svg > path:hover{
+    fill: #000000;
+}
+
+.appointment-item > a > svg > path:active{
+    fill: #81b3d2;
+}
 
 .appointment-item-people{
     display: flex;
     align-items: center;
     margin: 0;
-    height: 40px;
+    height: 38px;
+    color: #000000;
 }
 
-.appointment-item-people input{
-    width: 115px;
-    height: 40px;
+.people-switch{
+    width: 114px;
+    white-space: nowrap;
+    background: #ecf0f1;
     margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.people-switch > a{
+    color: #a9a9a9;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.people-switch > a:hover{
+    color: #000000;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.people-switch > a:active{
+    color: #81b3d2;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.people-switch a,
+.people-switch span {
+    display: inline-block;
+    min-width: 20px;
+    height: 38px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 38px;
+    text-decoration: none;
+    font-weight: bold;
+    background: transparent;
+    flex-grow: 1;
+}
+
+.people-switch .prev {
+    background-image: url("/assets/course14/arrows.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.people-switch .next {
+    background-image: url("/assets/course14/arrows.png");
+    background-repeat: no-repeat;
+    background-position: 0 -40px;
 }
 
 .appointment button{
@@ -569,6 +648,15 @@ body{
     text-transform: uppercase;
     font-weight: normal;
 }
+
+.appointment button:hover{
+    background-color: #669ec0;
+}
+
+.appointment button:active{
+    background-color: #5496bd;
+}
+
 /*---------------------------------------footer------------------------------*/
 
 .main-footer{
@@ -598,6 +686,23 @@ body{
 .social-button{
     width: 45px;
     height: 50px;
+    background-color: #81b3d2;
+}
+
+.social-button svg {
+    margin-top: 15px;
+}
+
+.social-button:active svg > path {
+    fill: #88b6d1;
+}
+
+.social-button:hover{
+    background-color: #669ec0;
+}
+
+.social-button:active{
+    background-color: #5496bd;
 }
 
 .footer-social{
@@ -607,7 +712,6 @@ body{
 }
 
 .footer-social li{
-    background-color: #81b3d2;
     width: 45px;
     height: 50px;
     margin-left: 5px;
@@ -618,6 +722,28 @@ body{
     justify-content: center;
 }
 
+.footer-copyright{
+    text-align: center;
+    position: relative;
+    width: 200px;
+    display: flex;
+}
+
+.footer-copyright > a{
+    right: 10px;
+    top: 8px;
+}
+
+.footer-copyright a > svg{
+    height: 40px;
+
+}
+
+.htmlacademy-logo{
+    display: inline-block;
+    height: 40px;
+    width: 115px;
+}
 /*-------------------------------------------FLEX INNER PAGE-----------------------------------*/
 
 .filters{
@@ -765,8 +891,6 @@ body{
     fill: #81b3d2;
 }
 
-
-
 /*---------------------------------------------CATALOG----------------------*/
 
 .catalog{
@@ -801,17 +925,36 @@ body{
     justify-content: space-between;
 }
 
-.catalog-list-item h2{
+.catalog-list-item > a{
     margin:0px;
+    font-size: 21px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.catalog-list-item > a:hover{
+    color: #81b3d2;
+}
+
+.catalog-list-item > a:active{
+    color: #e5e5e5;
 }
 
 .hotels-rating{
     position: absolute;
-    right: 70px;
+    right: 72px;
 
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+}
+
+.rating-stars{
+    display: flex;
+}
+
+.rating-stars img{
+    margin-left: 5px;
 }
 
 .hotels-rating-quantity{
