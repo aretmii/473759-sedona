@@ -50,14 +50,14 @@ h2{
     color: #81b3d2;
 }
 
-.site-navigation a:focus{
-    color: #e7e7e7;
+.site-navigation a:active{
+    color: #000000;
+    opacity: 0.3;
 }
 
-.site-navigation a:active{
+.menu-item-active > a{
     color: #766357;
 }
-
 
 /*----------------------------------FEATURES---------------------------------------*/
 
@@ -206,7 +206,8 @@ fieldset{
 
 .sorting-menu-options a{
     opacity: 0.3;
-    text-decoration: underline dotted;
+    color: #000000;
+    text-decoration: underline dotted #81b3d2;
 }
 
 .sorting-menu-options a:focus{
@@ -334,6 +335,10 @@ body{
     line-height: 26px;
 }
 
+.menu-item-active{
+
+}
+
 /*-----------------------------------Background SEDONA----------------------*/
 .sedona-preview{
     display: flex;
@@ -353,17 +358,26 @@ body{
 
 .sedona-preview-shapes{
     width: 100%;
-    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.sedona-preview-shapes:before{
+    content:" ";
+    display: block;
+    height: 57px;
+    width: 100%;
+    background-image: url("../img/shape.png");
+    background-repeat: no-repeat;
+    background-color: transparent;
 }
 
 .sedona-preview-text{
     width: 100%;
     flex-grow: 1;
     display: flex;
-    margin: 45px 0 35px 0;
+    padding: 45px 0 35px 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -436,10 +450,14 @@ body{
     align-items: center;
 }
 
+.features-item img{
+    padding-top: 30px;
+}
+
 .features-item-text{
     width: 260px;
     min-height: 170px;
-    color: #000000;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -447,8 +465,8 @@ body{
 
 }
 
-.features-item-text h2,
-.features-item-text p{
+.features-list-last .features-item-text h2,
+.features-list-last .features-item-text p{
     color: #000000;
 }
 
@@ -556,16 +574,25 @@ body{
     align-items: center;
 }
 
+.appointment-item label[for="arrival-date"]::after{
+    content: "24 апреля 2017";
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    left: 120px;
+}
+
+.appointment-item label[for="dep-date"]::after{
+    content: "4 июля 2017";
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    left: 120px;
+}
+
 .appointment-item input{
     min-width: 345px;
     height: 40px;
-    /*
-    другой способ добавления значка календаря в input
-    background-image: url("../img/calendar.svg");
-    background-repeat: no-repeat;
-    background-origin: padding-box;
-    background-position: 98% 50%;
-    */
   }
 
 .appointment-item > a{
@@ -597,7 +624,7 @@ body{
 .people-switch{
     width: 114px;
     white-space: nowrap;
-    background: #ecf0f1;
+    background: #f2f2f2;
     margin-left: 40px;
     display: flex;
     justify-content: space-between;
@@ -729,27 +756,23 @@ body{
 }
 
 .footer-copyright{
-    text-align: center;
-    position: relative;
     width: 200px;
+    height: 40px;
+
     display: flex;
+    align-items: center;
 }
 
 .footer-copyright > a{
-    right: 10px;
-    top: 8px;
-}
-
-.footer-copyright a > svg{
-    height: 40px;
-
-}
-
-.htmlacademy-logo{
     display: inline-block;
-    height: 40px;
-    width: 115px;
 }
+
+.footer-copyright > a > svg{
+    width: 110px;
+    height: 40px;
+    margin-left: 10px;
+}
+
 /*-------------------------------------------FLEX INNER PAGE-----------------------------------*/
 
 .filters{
@@ -825,25 +848,45 @@ body{
     background-repeat: no-repeat;
 }
 
+.filter-option input[type=checkbox]:checked:disabled + label:before{
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 24px;
+    margin-right: 13px;
+    background-image: url("../img/checkbox-on.svg");
+    background-repeat: no-repeat;
+    opacity: 0.3;
+}
 
+.filter-option input[type=checkbox]:disabled + label:before{
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 24px;
+    margin-right: 13px;
+    background-image: url("../img/checkbox-off.svg");
+    background-repeat: no-repeat;
+    opacity: 0.3;
+}
 /*---------------------------------------------SORTING MENU---------------------*/
 
 .sorting-menu{
     margin: 0 auto;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 
     color: #000000;
 }
 
 .sorting-menu-form{
-    width: 1055px;
-    margin: 34px 0 34px 0;
+    padding: 34px 70px 34px 70px;
+    margin: 0;
 
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .sorting-menu-form p{
@@ -873,10 +916,9 @@ body{
 }
 
 .sorting-buttons{
-    position: absolute;
-    right: 75px;
-
     width: 35px;
+    position: absolute;
+    right: 70px;
 
     display: flex;
     justify-content: space-between;
@@ -897,6 +939,9 @@ body{
     fill: #81b3d2;
 }
 
+.sorting-button-active svg > path{
+    fill: #81b3d2;
+}
 /*---------------------------------------------CATALOG----------------------*/
 
 .catalog{
@@ -907,7 +952,6 @@ body{
 }
 
 .catalog-list{
-    max-width: 1055px;
     list-style: none;
 
     padding: 30px 70px 30px 70px;
@@ -925,10 +969,17 @@ body{
 
 .catalog-list-item{
     margin-left: 30px;
+    max-width: 780px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.catalog-list-item > p{
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
 }
 
 .catalog-list-item > a{
@@ -978,135 +1029,136 @@ body{
 
 /*---------------------------------FILTER RANGE-----------------------------*/
 .filter-range {
-  width: 330px;
-  margin: 30px 0; /* для демо */
+    width: 330px;
+    margin: 30px 0; /* для демо */
 
-  color: #ffffff;
-  text-transform: uppercase;
+    color: #ffffff;
+    text-transform: uppercase;
 }
 
 .filter-range-title {
-  margin-bottom: 9px;
+    margin-bottom: 9px;
 
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 21px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
 }
 
 .price-controls {
-  position: relative;
-  height: 36px;
-  margin-bottom: 20px;
+    position: relative;
+    height: 36px;
+    margin-bottom: 20px;
 
-  font-size: 0;
+    font-size: 0;
 
-  border: 2px solid #ffffff;
-  border-radius: 2px;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
 }
 
 .price-controls::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
 
-  width: 2px;
-  height: 22px;
+    width: 2px;
+    height: 22px;
 
-  background: #ffffff;
-  transform: translate(-50%, -50%);
+    background: #ffffff;
+    transform: translate(-50%, -50%);
 }
 
 .price-controls label {
-  display: inline-block;
+    display: inline-block;
 
-  font-size: 14px;
-  line-height: 38px;
-  vertical-align: top;
+    font-size: 14px;
+    line-height: 38px;
+    vertical-align: top;
 
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 90px;
-  padding-left: 65px;
+    width: 90px;
+    padding-left: 65px;
 }
 
 .price-controls input {
-  width: 50px;
-  margin: 0;
+    width: 50px;
+    margin: 0;
 
-  color: inherit;
-  font: inherit;
+    color: inherit;
+    font: inherit;
 
-  background: none;
-  border: none;
+    background: none;
+    border: none;
 }
 
 .range-controls {
-  position: relative;
+    position: relative;
 
-  margin-bottom: 32px;
+    margin-bottom: 32px;
 }
 
 .range-controls .scale {
-  height: 2px;
+    height: 2px;
 
-  background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .range-controls .bar {
-  width: 80%;
-  height: 2px;
+    width: 80%;
+    height: 2px;
 
-  background: #ffffff;
+    background: #ffffff;
 }
 
 .range-toggle {
-  position: absolute;
-  top: -9px;
+    position: absolute;
+    top: -9px;
 
-  width: 4px;
-  height: 4px;
+    width: 4px;
+    height: 4px;
 
-  background: #ababab;
-  border: 8px solid #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
-  cursor: pointer;
+    background: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
 }
 
 .range-toggle:hover {
-  background: #1c4f80;
+    background: #1c4f80;
+    border: 9px solid #ffffff;
 }
 
 .range-toggle-min {
-  left: 0;
+    left: 0;
 }
 
 .range-toggle-max {
-  left: 80%;
+    left: 80%;
 }
 
 .btn-transparent {
-  display: block;
-  margin: 0 auto;
-  padding: 6px 35px;
+    display: block;
+    margin: 0 auto;
+    padding: 6px 35px;
 
-  font-size: 14px;
-  line-height: 20px;
-  color: #ffffff;
-  text-transform: uppercase;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
 
-  background: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 2px;
-  cursor: pointer;
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
 }
 
 .btn-transparent:hover {
-  color: #000000;
+    color: #000000;
 
-  background: #ffffff;
+    background: #ffffff;
 }
