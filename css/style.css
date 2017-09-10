@@ -8,9 +8,6 @@ body{
     text-transform: uppercase;
     background-color: #f1f1f1;
     font-family: "PT Sans", sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 a{
@@ -144,10 +141,8 @@ input{
 
 /*----------------------------------------FOOTER-------------------------------------------------*/
 
-.main-footer{
-    background-color: #ffffff;
-    opacity: 0.9;
-    min-height: 120px;
+.main-footer-flex{
+    background-color: rgba(254,254,254, 0.9);
 }
 
 .footer-social{
@@ -183,7 +178,6 @@ input{
 /*-----------------------------Inner Page Styles-------------------------------------*/
 
 /*-----------------------------Filters---------------------------*/
-/*-----------как быть с иконками чекбокса? именно svg картиинки чекбоксов не открываются*/
 
 form.filter{
     display: flex;
@@ -194,80 +188,7 @@ fieldset{
 }
 
 .filter-option{
-    width: 240px;
     list-style: none;
-}
-
-.filter-option li::after{
-    content: " ";
-    background-image: url("../img/calendar.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.filter-fieldset{
-    margin-top: 30px;
-    width: 240px;
-    margin-left: 72px;
-    float :left;
-    font-size: 16px;
-    color: #ffffff;
-}
-
-.filter-fieldset ul{
-    padding: 0;
-}
-
-.filter-fieldset:nth-child(2){
-    margin-left: 15px;
-}
-
-.filter-option-cost{
-    margin-top: 30px;
-    width: 315px;
-    float: right;
-    margin-right: 72px;
-    font-size: 16px;
-    color: #ffffff;
-}
-
-.filter-option-cost table{
-    border: 1px solid #ffffff;
-    margin-top: 10px;
-}
-
-.filter-option-cost td{
-    font-size: 14px;
-    color: #ffffff;
-    font-weight: normal;
-    border-right: 2px solid #ffffff;
-    width: 160px;
-    text-align: center;
-}
-
-.filter-option-cost td:nth-child(2){
-    border-right: none;
-}
-
-.filter-option-cost button{
-    margin-top: 20px;
-    display: inline-block;
-    position: relative;
-    left: 90px;
-    font-size: 14px;
-    color: #ffffff;
-    font-weight: normal;
-    border-radius: 2px;
-    width: 133px;
-    height: 31px;
-    border: 1px solid #ffffff;
-    background: none;
-}
-
-/*как сделать два ползунка и как вообще их стилизовать?*/
-.filter-option-cost input{
-    width: 320px;
-    margin-top: 5px;
 }
 
 /*-----------------------------------SORTING-Menu---------------------------*/
@@ -315,69 +236,9 @@ fieldset{
 
 /*------------------------------------CONTENT---------------------------------*/
 
-/*ОТКУДА У  UL MARGIN-BOTTOM 14px????????
-я переопределил margin-bottom на 0px, и li повел себя как то странно,
-как будто один вложен в другой.
-*/
 .content{
     background-color: #ffffff;
-}
-
-.catalog-list{
-    list-style: none;
-    border-top: 1px solid #e5e5e5;
-    height: 152px;
-    margin-top: 0px;
-    padding-left: 70px;
-}
-
-.catalog-list:last-child{
-    list-style: none;
-    border-top: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.catalog-list:last-of-type{
-    margin-bottom: 0;
-}
-
-.catalog-item li{
-    height: 150px;
-}
-
-.catalog-item p{
-    display: inline-block;
-    margin: 0;
-}
-
-.catalog-item a{
-    color: #000000;
-}
-
-div.catalog-item-content{
-    height: 82px;
-    display: inline-block;
-    margin-top: 28px;
-    padding: 0;
-}
-
-.catalog-item-content h2{
-    margin: 0;
-}
-
-div.catalog-category{
-    margin: 10px 0;
-    color: #333333;
-}
-
-.catalog-item-title{
-    display:inline-block;
-    margin:0px 0px;
-}
-
-.catalog-item p:first-of-type{
-    float:left;
-    margin: 30px 30px 30px 0;
+    padding-bottom: 122px;
 }
 
 a.button{
@@ -403,19 +264,21 @@ body{
 }
 
 .main-header{
-    max-width: 1200px;
-    min-height: 760px;
+    min-height: 57px;
     margin:0 auto;
-    background-image: url("../img/background.jpg");
-    background-repeat:  no-repeat;
-    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
 }
 
 .container{
+    position: relative;
     min-width: 768px;
     max-width: 1200px;
-    min-height: 56px;
     margin: 0 auto;
+    background-color: #ffffff;
 }
 
 .logo {
@@ -429,11 +292,13 @@ body{
 }
 /*---------------------------------navigation-------------------------------*/
 .main-navigation{
-    background-color: #ffffff;;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     background-color: #ffffff;
     height: 57px;
+    max-width: 1200px;
+    margin:0 auto;
 }
 
 .site-navigation{
@@ -444,6 +309,7 @@ body{
     flex-grow: 1;
     flex-wrap: wrap;
     background-color: transparent;
+    max-width: 1200px;
 }
 
 .site-navigation li{
@@ -462,20 +328,23 @@ body{
 /*-----------------------------------Background SEDONA----------------------*/
 .sedona-preview{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    min-height: 720px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url("../img/background.jpg");
+}
+
+.sedona-preview > img{
+  margin-top: 15px;
 }
 
 .sedona-preview-tagline{
-    margin-top: 75px;
+    margin-top: 132px;
 }
 
 .sedona-preview-shapes{
     width: 100%;
-    min-height: 255px;
-    background-color: transparent;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -485,6 +354,7 @@ body{
     width: 100%;
     flex-grow: 1;
     display: flex;
+    margin: 45px 0 35px 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -606,13 +476,6 @@ body{
 
 /*------------------------------------------MAP-----------------------------------*/
 
-.hotels-map{
-    min-width: 1200px;
-    min-height: 885px;
-    display: flex;
-    flex-direction: column;
-}
-
 .white-back{
     min-height: 290px;
     background-color: #ffffff;
@@ -631,9 +494,10 @@ body{
     max-width: 1200px;
     background-image: url("../img/map.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -679,7 +543,6 @@ body{
 .appointment-item input{
     min-width: 345px;
     height: 40px;
-    /*------------------------Как сделать картинки блеклыми?-------------*/
     background-image: url("../img/calendar.svg");
     background-repeat: no-repeat;
     background-origin: padding-box;
@@ -707,16 +570,23 @@ body{
     font-weight: normal;
 }
 /*---------------------------------------footer------------------------------*/
-footer.container{
-    max-width: 1200px;
-
-
-}
 
 .main-footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+}
+
+.main-footer-flex{
+    margin: 0 auto;
+    max-width: 1200px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    min-height: 120px;
 }
 
 .tag{
@@ -738,8 +608,6 @@ footer.container{
 
 .footer-social li{
     background-color: #81b3d2;
-    /*background-image: url("../img/fb-icon.svg");
-    background-repeat: no-repeat;*/
     width: 45px;
     height: 50px;
     margin-left: 5px;
@@ -756,31 +624,340 @@ footer.container{
     max-width: 1200px;
     min-height: 215px;
     margin: 0 auto;
-    /*---------------------------------Как размыть фон?------------------*/
-    background-image: url("../img/background.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-}
 
-.catalog{
+    background-image: url("../img/catalog-background.jpg");
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
 }
 
+.filter{
+    padding-top: 57px;
+    margin: 0 70px 0 70px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-list{
+    display: flex;
+
+    padding: 25px 0 0 0;
+}
+
+.filter-fieldset{
+    font-size: 16px;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    margin-right: 110px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-fieldset legend{
+    margin-bottom: 15px;
+}
+
+.filter-fieldset ul{
+    padding: 0;
+}
+
+.filter-option label{
+    display: block;
+    font-weight: normal;
+}
+
+.filter-option input[type="checkbox"]{
+    display: none;
+}
+
+.filter-option input[type="checkbox"] + label:before{
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 24px;
+    margin-right: 13px;
+    background-image: url("../img/checkbox-off.svg");
+    background-repeat: no-repeat;
+    transform: translateY(5px);
+}
+
+.filter-option input[type=checkbox]:checked + label:before{
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 24px;
+    margin-right: 13px;
+    background-image: url("../img/checkbox-on.svg");
+    background-repeat: no-repeat;
+}
+
+
+/*---------------------------------------------SORTING MENU---------------------*/
+
 .sorting-menu{
+    margin: 0 auto;
+
     display: flex;
     justify-content: center;
+
     color: #000000;
 }
 
 .sorting-menu-form{
-    width: 1200px;
+    width: 1055px;
+    margin: 34px 0 34px 0;
+
     display: flex;
     justify-content: flex-start;
-    margin-left: 70px;
     align-items: center;
 }
 
-.sorting-btn:first-of-type{
-    margin-left: 500px;
+.sorting-menu-form p{
+    margin: 0;
+    padding: 0;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.sorting-menu-fieldset{
+    padding: 0;
+    margin: 0;
+    width: 600px;
+    margin-left: 45px;
+}
+
+.sorting-menu-options{
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.sorting-menu-options b{
+    font-weight: normal;
+}
+
+.sorting-buttons{
+    position: absolute;
+    right: 75px;
+
+    width: 35px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.sorting-button-link-up svg > path,
+.sorting-button-link-down svg > path{
+    fill: #cacaca;
+}
+
+.sorting-button-link-up svg > path:hover,
+.sorting-button-link-down svg > path:hover{
+    fill: #000000;
+}
+
+.sorting-button-link-up svg > path:active,
+.sorting-button-link-down svg > path:active{
+    fill: #81b3d2;
+}
+
+
+
+/*---------------------------------------------CATALOG----------------------*/
+
+.catalog{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.catalog-list{
+    max-width: 1055px;
+    list-style: none;
+
+    padding: 30px 70px 30px 70px;
+    margin: 0;
+    border-top: solid 1px #e5e5e5;
+
+    background-color: #ffffff;
+
+    display: flex;
+  }
+
+.catalog-list:last-child{
+    border-bottom:  solid 1px #e5e5e5;
+}
+
+.catalog-list-item{
+    margin-left: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.catalog-list-item h2{
+    margin:0px;
+}
+
+.hotels-rating{
+    position: absolute;
+    right: 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.hotels-rating-quantity{
+    width: 110px;
+    height: 30px;
+    margin-top: 45px;
+
+    background-color: #f2f2f2;
+    color: 666666;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*---------------------------------FILTER RANGE-----------------------------*/
+.filter-range {
+  width: 330px;
+  margin: 30px 0; /* для демо */
+
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.filter-range-title {
+  margin-bottom: 9px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price-controls {
+  position: relative;
+  height: 36px;
+  margin-bottom: 20px;
+
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
 }

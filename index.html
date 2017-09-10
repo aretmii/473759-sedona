@@ -8,37 +8,36 @@
   <title>HTML Academy: Седона</title>
 </head>
 <body>
+  <div class="container">
   <header class="main-header">
-    <div class="container">
       <nav class="main-navigation">
         <ul class="site-navigation">
           <li class="menu-item-left"><a href="info.html">Информация</a></li>
           <li class="menu-item-left"><a href="media.html">Фото и видео</a></li>
           <li class="logo">
-            <a href="#" class="">
+            <a href="index.html">
               <img src="img/logo.png" width="140" height="70" alt="Логотип сайта Sedona">
             </a>
           </li>
           <li class="menu-item-right"><a href="map.html">Карта штата</a></li>
-          <li class="menu-item-right"><a href="hotels.html">Гостиницы</a></li>
+          <li class="menu-item-right"><a href="catalog.html">Гостиницы</a></li>
         </ul>
       </nav>
-    <section class="sedona-preview">
-      <h1 class="visually-hidden">Welcome to the gorgeous Sedona "Because the grand canyon sucks"</h1>
-      <div class="sedona-preview-tagline">
-        <img src="img/intro.png" alt="Welcome to the gorgeous Sedona "Because the grand canyon sucks"">
-      </div>
-      <div class="sedona-preview-shapes">
-        <img src="img/shape.png" alt="Shapes">
-        <div class="sedona-preview-text">
-          <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
-          <p>Рассмотрим 5 причин по которым Седона круче, чем Гранд Каньон</p>
-        </div>
-      </div>
-    </section>
-    </div>
   </header>
-  <main class="container">
+  <main>
+<section class="sedona-preview">
+  <h1 class="visually-hidden">Welcome to the gorgeous Sedona "Because the grand canyon sucks"</h1>
+  <div class="sedona-preview-tagline">
+    <img src="img/intro.png" alt="Welcome to the gorgeous Sedona "Because the grand canyon sucks"">
+  </div>
+  <img src="img/shape.png" alt="Shapes">
+  <div class="sedona-preview-shapes">
+    <div class="sedona-preview-text">
+      <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
+      <p>Рассмотрим 5 причин по которым Седона круче, чем Гранд Каньон</p>
+    </div>
+  </div>
+</section>
     <section class="features">
       <ul class="features-list-photo">
           <li class="features-item">
@@ -138,18 +137,18 @@
           <form class="appointment-form">
             <p class="appointment-item">
               <label for="arrival-date">Дата заезда:</label>
-              <input id="arrival-date" type="date" name="name" value="">
+              <input id="arrival-date" type="text" name="name" value="">
             <p class="appointment-item">
               <label for="dep-date">Дата выезда:</label>
-              <input id="dep-date" type="date" name="name" value="">
+              <input id="dep-date" type="text" name="name" value="">
             </p>
             <p class="appointment-item-people">
               <label for="adult">Взрослые:</label>
-              <input id="adult" type="number" name="name" value="" placeholder="0">
+              <input id="adult" type="text" name="name" value="" placeholder="0">
             </p>
             <p class="appointment-item-people">
               <label for="kids">Дети:</label>
-              <input id="kids" type="number" name="name" value="" placeholder="0">
+              <input id="kids" type="text" name="name" value="" placeholder="0">
             </p>
           </form>
           <button type="submit">Найти</button>
@@ -157,9 +156,8 @@
       </div>
     </section>
   </main>
-  <!--Можно ли футер засунуть внутрь main????-->
-  <footer class="container">
-    <div class="main-footer">
+  <footer class="main-footer">
+    <div class="main-footer-flex">
       <p class="tag">
         #visitSedona
       </p>
@@ -176,5 +174,6 @@
       </p>
     </div>
   </footer>
+</div>
 </body>
 </html>
