@@ -329,10 +329,9 @@ body{
     text-align: right;
 }
 
-.menu-item-active{
-
+.menu-item-right-center{
+    margin-left: 110px;
 }
-
 /*-----------------------------------Background SEDONA----------------------*/
 .sedona-preview{
     display: flex;
@@ -384,6 +383,10 @@ body{
     display: inline-block;
     width: 450px;
     text-align: center;
+}
+
+.sedona-preview-text p{
+    color: #333333;
 }
 
 /*---------------------------------FEATURES---------------------------------------*/
