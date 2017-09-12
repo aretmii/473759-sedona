@@ -339,8 +339,10 @@ body{
     align-items: center;
     justify-content: flex-start;
     background-image: url("../img/background.jpg");
+    background-size: 100%;
     background-position-y: -56px;
     background-repeat: no-repeat;
+    width: 100%;
 }
 
 .sedona-preview > img{
@@ -806,17 +808,16 @@ input.people-switch-number{
 
 .filters{
     max-width: 1200px;
-    min-height: 215px;
     margin: 0 auto;
 
     background-image: url("../img/catalog-background.jpg");
     background-repeat: no-repeat;
+    background-position-y: -55px;
     display: flex;
     flex-direction: column;
 }
 
 .filter{
-    padding-top: 57px;
     margin: 0 70px 0 70px;
 
     display: flex;
@@ -1005,10 +1006,15 @@ input.people-switch-number{
     justify-content: space-between;
 }
 
-.catalog-list-item > p{
+.catalog-list-cost{
+    display: flex;
+}
+
+.catalog-list-cost > p{
     padding: 0;
     margin: 0;
     font-weight: normal;
+    min-width: 110px;
 }
 
 .catalog-list-item > a{
