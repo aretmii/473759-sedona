@@ -7,7 +7,7 @@ body{
     font-weight: bold;
     text-transform: uppercase;
     background-color: #f1f1f1;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
 }
 
 a{
@@ -99,7 +99,7 @@ input{
 .search-button{
     display: block;
     text-align: center;
-    padding: 30px 0;
+    padding: 32px 0 34px 0;
     width: 570px;
     color: #ffffff;
     background-color: #766357;
@@ -283,8 +283,9 @@ body{
 .logo {
     width: 140px;
     min-height: 70px;
+    margin: auto;
     position: absolute;
-
+    top: 0; left: 0; bottom: 0; right: 0;
 }
 
 /*---------------------------------navigation-------------------------------*/
@@ -338,7 +339,7 @@ body{
 }
 
 .sedona-preview-tagline{
-    margin: 76px 0 15px 0;
+    margin: 75px 0 20px 0;
 }
 
 .sedona-preview-shapes{
@@ -362,7 +363,7 @@ body{
     width: 100%;
     flex-grow: 1;
     display: flex;
-    padding: 45px 0 35px 0;
+    padding: 55px 0 55px 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -373,10 +374,14 @@ body{
     display: inline-block;
     width: 450px;
     text-align: center;
+    line-height: 26px;
+    color: #000000;
+    margin: 5px 0 30px 0;
 }
 
 .sedona-preview-text p{
     color: #333333;
+    margin: 0;
 }
 
 /*---------------------------------FEATURES---------------------------------------*/
@@ -410,7 +415,7 @@ body{
 }
 
 .features-list-img h2{
-    margin: 30px 0 20px 0;
+    margin: 30px 0 25px 0;
     color: #000000;
 }
 
@@ -443,6 +448,15 @@ body{
     padding: 50px 0 60px 0;
 }
 
+.features-item-last{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 60px 0;
+}
+
 .features-list-first{
       width: 100%;
       display: flex;
@@ -457,20 +471,20 @@ body{
 
 .features-item-photo{
     background-color: #81b3d2;
-    flex-grow: 1;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 60px 0 60px 0;
+    padding: 0 0 60px 0;
+    width: 34%;
 }
 
 .features-item img{
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 .features-item-text{
-    width: 300px;
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -479,14 +493,16 @@ body{
 }
 
 .features-item-text p{
-    margin: 20px 0 0 0;
+    margin: 0;
+    padding: 25px 0 0px 0;
     font-weight: normal;
     text-align: center;
-    width: 320px;
+    width: 280px;
 }
 
 .features-item-text h2{
     text-align: center;
+    padding-top: 45px;
 }
 
 .features-list-last .features-item-text h2,
@@ -497,6 +513,7 @@ body{
 .features-item-flag{
     background-image: url("../img/real-city.jpg");
     background-repeat: no-repeat;
+    background-size: auto;
     background-position: center;
     width: 66%;
 }
@@ -509,11 +526,11 @@ body{
 }
 
 .features-list-last{
-      width: 100%;
-      display: flex;
-      padding: 0;
-      margin: 0;
-      color: #ffffff;
+    width: 100%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
 }
 
 .features-list-last li{
@@ -534,12 +551,14 @@ body{
 .white-back h2{
     font-size: 30px;
     color: #000000;
+    margin: 60px 0 35px 0;
 }
 
 .white-back p{
     margin: 0;
     font-weight: normal;
     text-align: center;
+    line-height: 24px;
 }
 
 .map{
@@ -548,6 +567,7 @@ body{
     background-image: url("../img/map.jpg");
     background-repeat: no-repeat;
     background-size: auto;
+    background-position: bottom;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -565,7 +585,7 @@ body{
     justify-content: space-between;
     align-items: center;
 
-    margin: 30px 0 0 0;
+    margin: 40px 0 0 0;
 }
 
 .appointment-item{
@@ -580,7 +600,7 @@ body{
 }
 
 .appointment-button{
-    margin-top: 50px;
+    margin-top: 45px;
     font-size: 21px;
     font-weight: normal;
     text-transform: uppercase;
@@ -600,11 +620,17 @@ body{
 
     background-color: #f2f2f2;
     border-color: #f2f2f2;
-  }
 
-input.appointment-item::placeholder{
     font-weight: bold;
     color: #000000;
+  }
+
+input::placeholder,
+input::placeholder{
+    font-weight: bold;
+    color: #000000;
+    opacity: 1;
+    text-transform: uppercase;
 }
 
 input:focus::-webkit-input-placeholder {
@@ -677,7 +703,7 @@ input:focus:-ms-input-placeholder {
     font-weight: bolder;
 }
 
-input.people-switch-number{
+.people-switch-number{
     width: 20%;
     border: none;
 }
@@ -709,7 +735,7 @@ input.people-switch-number{
     text-transform: uppercase;
     font-weight: normal;
 
-    margin: 30px 0 55px 0;
+    margin: 40px 0 55px 0;
     padding: 0;
 }
 
@@ -953,16 +979,17 @@ input.people-switch-number{
     padding: 0;
     margin: 0;
     width: 600px;
-    display: flex;
-  s}
+}
 
 .sorting-menu-options{
     padding: 0;
     margin: 0;
-
-    display: flex;
-    justify-content: space-around;
 }
+
+.sorting-menu-options li{
+    padding-left: 30px;
+}
+
 
 .sorting-buttons{
     width: 35px;
