@@ -14,13 +14,6 @@ a{
     text-decoration: none;
 }
 
-h2{
-    font-size: 21px;
-    line-height: 26px;
-    font-weight: bold;
-    color: #000000;
-}
-
 .visually-hidden{
     line-height: 74px;
     font-size: 74px;
@@ -197,12 +190,6 @@ fieldset{
     list-style: none;
 }
 
-.sorting-menu-fieldset p{
-    font-size: 21px;
-    font-weight: bold;
-    line-height: 26px;
-}
-
 .sorting-menu-options li,p{
     display: inline-block;
 }
@@ -290,6 +277,7 @@ body{
     max-width: 1200px;
     margin: 0 auto;
     background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .logo {
@@ -399,14 +387,18 @@ body{
 }
 
 .features-list{
-    width: 1200px;
-    min-height: 330px;
+    width: 100%
     display: flex;
-    align-items: center;
+    justify-content: center;
     padding: 0;
     margin: 0;
     color: #ffffff;
     list-style: none;
+    background-color: #ffffff;
+}
+
+.features-list ul > li{
+    background-color: #ffffff;
 }
 
 .features-list-img{
@@ -429,7 +421,6 @@ body{
 .features-list-photo{
     width: 100%;
     display: flex;
-    justify-content: center;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -443,13 +434,24 @@ body{
 }
 
 .features-item{
-    background-color: #81b3d2;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 50px 0 60px 0;
+}
+
+.features-list-first{
+      width: 100%;
+      display: flex;
+      padding: 0;
+      margin: 0;
+      color: #ffffff;
+}
+
+.features-list-first li{
+    background-color: #ffffff;
 }
 
 .features-item-photo{
@@ -484,7 +486,6 @@ body{
 
 .features-item-text h2{
     text-align: center;
-    width: 150px;
 }
 
 .features-list-last .features-item-text h2,
@@ -504,14 +505,6 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     width: 66%;
-}
-
-.features-refind{
-    min-height: 330px;
-}
-
-.features-refind ul > li{
-    background-color: #ffffff;
 }
 
 .features-list-last{
@@ -539,6 +532,13 @@ body{
 
 .white-back h2{
     font-size: 30px;
+    color: #000000;
+}
+
+.white-back p{
+    margin: 0;
+    font-weight: normal;
+    text-align: center;
 }
 
 .map{
@@ -553,10 +553,6 @@ body{
     align-items: center;
 }
 
-.white-back p{
-    margin: 0;
-    font-weight: normal;
-}
 /*-----------------------------------Appointment---------------------------*/
 
 .appointment-form{
@@ -605,7 +601,7 @@ body{
     border-color: #f2f2f2;
   }
 
-.appointment-item input::placeholder{
+input.appointment-item::placeholder{
     font-weight: bold;
     color: #000000;
 }
@@ -936,19 +932,28 @@ input.people-switch-number{
     flex-wrap: wrap;
 }
 
-.sorting-menu-form p{
+.sorting-menu-form span{
     margin: 0;
     padding: 0;
     font-size: 21px;
     font-weight: bold;
 }
 
+.sorting-menu-form p{
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 0 0 50px;
+
+    width: 80px;
+}
+
 .sorting-menu-fieldset{
     padding: 0;
     margin: 0;
     width: 600px;
-    margin-left: 45px;
-}
+    display: flex;
+  s}
 
 .sorting-menu-options{
     padding: 0;
@@ -956,10 +961,6 @@ input.people-switch-number{
 
     display: flex;
     justify-content: space-around;
-}
-
-.sorting-menu-options b{
-    font-weight: normal;
 }
 
 .sorting-buttons{
@@ -1072,7 +1073,7 @@ input.people-switch-number{
     margin-top: 45px;
 
     background-color: #f2f2f2;
-    color: 666666;
+    color: #666666;
 
     display: flex;
     justify-content: center;
@@ -1082,7 +1083,7 @@ input.people-switch-number{
 /*---------------------------------FILTER RANGE-----------------------------*/
 .filter-range {
     width: 330px;
-    margin: 30px 0; /* для демо */
+    margin: 30px 0;
 
     color: #ffffff;
     text-transform: uppercase;
